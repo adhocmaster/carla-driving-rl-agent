@@ -85,6 +85,9 @@ class Stage:
         self.env_args = environment
         self.env = None
 
+        print(f'Environment class {self.env_class}')
+        print(f'Agent class {self.agent_class}')
+
         # Representation
         if isinstance(representation, dict):
             self.should_do_repr_lear = True
@@ -161,6 +164,7 @@ class Stage:
         return self
 
     def evaluate(self, **kwargs) -> 'Stage':
+        print(f"evaluation stage with agent type {self.agent_class} and kwargs = {kwargs}")
         self.init()
         self.agent.evaluate(**kwargs)
         return self
@@ -512,13 +516,14 @@ def evaluate(mode: str, town: str, seeds: list, traffic: str, steps=512, trials=
         weather = None
     else:
         test_weather = [
-            carla.WeatherParameters.CloudySunset,
-            carla.WeatherParameters.HardRainNoon,
-            carla.WeatherParameters.HardRainSunset,
-            carla.WeatherParameters.MidRainSunset,
-            carla.WeatherParameters.MidRainyNoon,
-            carla.WeatherParameters.WetCloudyNoon,
-            carla.WeatherParameters.WetCloudySunset
+            carla.WeatherParameters.ClearNoon
+            # carla.WeatherParameters.CloudySunset,
+            # carla.WeatherParameters.HardRainNoon,
+            # carla.WeatherParameters.HardRainSunset,
+            # carla.WeatherParameters.MidRainSunset,
+            # carla.WeatherParameters.MidRainyNoon,
+            # carla.WeatherParameters.WetCloudyNoon,
+            # carla.WeatherParameters.WetCloudySunset
         ]
 
         weather = test_weather

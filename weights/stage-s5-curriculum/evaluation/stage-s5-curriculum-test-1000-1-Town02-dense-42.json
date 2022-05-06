@@ -1,0 +1,32 @@
+{
+  "collision_rate": [
+    1.0
+  ],
+  "collision_rate_mean": 1.0,
+  "collision_rate_std": 0.0,
+  "similarity": [
+    0.9930944830077472
+  ],
+  "similarity_mean": 0.9930944830077472,
+  "similarity_std": 0.0,
+  "waypoint_distance": [
+    0.7038578716348867
+  ],
+  "waypoint_distance_mean": 0.7038578716348867,
+  "waypoint_distance_std": 0.0,
+  "speed": [
+    9.371819732387243
+  ],
+  "speed_mean": 9.371819732387243,
+  "speed_std": 0.0,
+  "total_reward": [
+    479.532841986226
+  ],
+  "total_reward_mean": 479.532841986226,
+  "total_reward_std": 0.0,
+  "timesteps": [
+    106
+  ],
+  "timesteps_mean": 106.0,
+  "timesteps_std": 0.0
+}

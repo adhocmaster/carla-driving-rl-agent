@@ -191,6 +191,7 @@ class CARLABaseEnvironment(gym.Env):
         self.image_size = (image_shape[1], image_shape[0])
         self.fps = fps
         self.tick_time = 1.0 / self.fps
+        print(f'tick_time {self.tick_time} seconds')
         self.should_render = render
         self.should_debug = debug
         self.clock = pygame.time.Clock()
@@ -520,7 +521,7 @@ class CARLABaseEnvironment(gym.Env):
             self.synchronous_context = CARLASyncContext(self.world, self.sensors, fps=self.fps)
         else:
             self.vehicle.apply_control(carla.VehicleControl())
-            self.vehicle.set_velocity(carla.Vector3D(x=0.0, y=0.0, z=0.0))
+            # self.vehicle.set_velocity(carla.Vector3D(x=0.0, y=0.0, z=0.0))
 
             if self.origin_type == 'route':
                 new_origin = self.route.random_waypoint().transform

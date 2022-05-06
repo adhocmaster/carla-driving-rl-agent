@@ -227,6 +227,7 @@ class CARLAgent(PPOAgent):
             trials_done = 0
 
             while trials_done < trials:
+                print(f"trials_done = {trials_done} of {trials}")
                 self.memory = self.get_memory()
 
                 # random seed
@@ -252,6 +253,7 @@ class CARLAgent(PPOAgent):
                 waypoint_distance = 0.0
 
                 for t in range(1, timesteps + 1):
+                    print(f"timesteps = {t} of limit {timesteps}")
                     if isinstance(state, dict):
                         state = {f'state_{k}': v for k, v in state.items()}
 

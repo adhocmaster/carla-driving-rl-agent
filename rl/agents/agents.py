@@ -88,6 +88,7 @@ class Agent:
 
     # TODO: re-design `evaluation()` procedure
     def evaluate(self, episodes: int, timesteps: int, render=True, seeds=None) -> list:
+        print(f"agent evaluating {episodes} episodes")
         rewards = []
         sample_seed = False
 
